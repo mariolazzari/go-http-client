@@ -63,3 +63,9 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 ## Working on the core
 
 ### Go modules
+
+- create github repo
+- .gitignore
+- go mod init
+- go mod tidy
+-
