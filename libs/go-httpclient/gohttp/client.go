@@ -12,7 +12,7 @@ type HttpClient interface {
 }
 
 type httpClient struct {
-	Header http.Header
+	Headers http.Header
 }
 
 func New() HttpClient {
@@ -20,7 +20,7 @@ func New() HttpClient {
 }
 
 func (c *httpClient) SetHeaders(headers http.Header) {
-	c.Header = headers
+	c.Headers = headers
 }
 
 func (c *httpClient) Get(url string, headers http.Header) (*http.Response, error) {

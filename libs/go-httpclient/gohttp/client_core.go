@@ -33,7 +33,7 @@ func (c *httpClient) getRequestHeaders(requestHeader http.Header) http.Header {
 	result := make(http.Header)
 
 	// Common headers
-	for header, value := range c.Header {
+	for header, value := range c.Headers {
 		if len(value) > 0 {
 			result.Set(header, value[0])
 		}
@@ -62,5 +62,4 @@ func (c *httpClient) getRequestBody(contentType string, body any) ([]byte, error
 	default:
 		return json.Marshal(body)
 	}
-
 }
