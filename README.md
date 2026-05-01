@@ -361,3 +361,17 @@ func TestGetRequestBody(t *testing.T) {
 ```
 
 ## Publishing
+
+### Publish a module
+
+```sh
+go mod tidy
+go test ./..
+git tag v0.1.0
+git tag
+git push origin v0.1.0
+```
+
+### Testify
+
+[Github](https://github.com/stretchr/testify)
